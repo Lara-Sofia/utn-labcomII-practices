@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <p>Pasos a seguir para loguearte</p>
+    <ol>
+        <li>Completar el formulario con tus datos</li>
+        <li>Enviar la información</li>
+    </ol>
+    <p>
+        Si no estás registrado, podes hacerlo haciendo "Click" <a href="register.html">aquí</a>
+    </p>
+
+    <form action="/users.txt" method="post" target="_blank">
+        <label for="nameUser">Nombre de usuario:</label> <br>
+        <input 
+        type="text" 
+        name="user" 
+        id="nameUser"
+        placeholder="user name"
+        maxlength="12"
+        readonly
+        > <br>
+    
+        <label for="contraseña">Contraseña</label> <br>
+        <input 
+        type="text" 
+        type="number"
+        name="contraseña"
+        id="contraseña"
+        placeholder="contraseña"
+        maxlength="16"
+        readonly
+        > <br>
+
+        <label for="recorderme">Recordarme</label> 
+        <input type="checkbox" name="Recordar" id="recordarme"> <br>
+        <input type="submit" value="Iniciar sesión"> <br>
+
+    </form>
+
+
+</body>
+</html>
