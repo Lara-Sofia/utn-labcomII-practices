@@ -1,0 +1,18 @@
+.main {
+    display: flex;
+    gap: 2px;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: aquamarine;
+    flex: 0.5;
+    padding: 12px 24px;
+}
+
+.contenido {
+    background-color: aqua;
+    flex: 1;
+    padding: 12px 24px;
+}

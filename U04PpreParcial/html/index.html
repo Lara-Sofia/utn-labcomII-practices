@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Preparcial</title>
+</head>
+<body>
+    <form>
+        <label for="pesos-argentinos">Pesos Argentinos</label>
+        <input type="text" id="pesos"required>
+        <label for="moneda-extranjera"></label>
+        <select name="moneda-extranjera" class="cambio" required>
+            <option value="dolares" class="cambio">Dolar</option>
+            <option value="euro" class="cambio">Euro</option>
+        </select>
+        <button type="submit" onclick="entero()">Enviar</button>
+    </form>
+    <P id="resultado">Al cambio es: </P>
+
+    <script src="/js/scrip.js"></script>
+</body>
+</html>

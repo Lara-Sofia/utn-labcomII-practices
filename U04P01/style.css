@@ -1,0 +1,10 @@
+.numeritos {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.button {
+    display: flex;
+    margin-left: 220px;
+}

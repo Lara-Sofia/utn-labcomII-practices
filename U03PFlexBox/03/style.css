@@ -1,0 +1,44 @@
+ul {
+    display:flex;
+    justify-content: space-between;
+    padding: 0%;
+    gap: 2px;
+    list-style: none;
+}
+
+ul li {
+    background-color: rgba(123,198,199,0.8);
+    font-family: sans-serif;
+    flex: 1 1 0; /*La propiedad CSS flex es una 
+    propiedad resumida que indica la capacidad de 
+    un elemento flexible para alterar sus dimensiones
+    y llenar el espacio disponible.*/
+}
+
+
+/* 0 0 auto */
+flex: none;
+
+/* Un valor, número sin unidades: flex-grow */
+flex: 2;
+
+/* Un valor, width/height: flex-basis */
+flex: 10em;
+flex: 30px;
+flex: auto;
+flex: content;
+
+/* Dos valores: flex-grow | flex-basis */
+flex: 1 30px;
+
+/* Dos valores: flex-grow | flex-shrink */
+flex: 2 2;
+
+/* Tres valores: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;
+
+/* Valores globales */
+flex: inherit;
+flex: initial;
+flex: unset;
+
