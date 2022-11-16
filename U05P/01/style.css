@@ -1,0 +1,10 @@
+.cuadrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadradito {
+    border: 1px solid #888;
+    padding: 10px;
+}

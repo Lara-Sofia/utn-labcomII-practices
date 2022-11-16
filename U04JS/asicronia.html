@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronico</title>
+</head>
+<body>
+    <h1>Asincroníco</h1>
+    <script>
+        // setTimeout & setInterval
+        setTimeout(() => {
+            console.log('Ejecutando un setTimeout. Esto se ejecuta una sóla vez');
+        }, 3000);
+
+        setInterval(()=>{
+            console.log('Ejecutando un setInterval. Esto se ejecuta indefinidamente cada cierto intervalo de tiempo');
+        }, 1000);
+
+        let temporizador = setInterval(()=>{
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+/*
+        clearTimeout(temporizador); //para el timeout
+        clearInterval(temporizador); // para el interval*/
+
+        // Funciones anonimas autoejecutables
+        (function(){
+            console.log('Mi primer IIFE')
+        });
+
+        (function(d, w, c){
+            console.log('El segundo');
+            console.log(d);
+        })(document, window, console);
+
+
+        // Código sincrónico bloquante
+        (()=>{
+            console.log('código sincrónico');
+            console.log('inicio');
+
+            function dos(){
+                console.log('dos');
+            }
+
+            function uno(){
+                console.log('uno');
+                dos();
+                console.log('tres');
+            }
+
+            uno();
+            console.log('final');
+        })();
+
+        console.log('**********')
+
+        // Código sincrónico no bloquante
+        (()=>{
+            console.log('código asincrónico');
+            console.log('inicio');
+
+            function dos(){
+                setTimeout(function(){
+                    console.log('dos');
+                }, 1000);
+            }
+
+            function uno(){
+                setTimeout(function(){
+                    console.log('uno');
+                }, 0);
+                dos();
+                console.log('tres');
+            }
+
+            uno();
+            console.log('final');
+        })();
+
+        //callbacks
+        function cuadradoCallbacks(value, callback){
+            //recursividad
+            setTimeout(() => {
+                callback(value, value*value);
+            }, 0|Math.random()*100);
+        };
+
+
+        cuadradoCallbacks(0, (value, callback  )=> {
+            console.log('inicia callbacks');
+        })
+
+        //Promesas, pensarlo como un if else
+        function cuadradoPromise(value){
+            return new Promise((resolve, reject)=> {
+                setTimeout(() => {
+                
+            }, 0|Math.random()*100);
+            })
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+LARA  --> Qué es una expresión regular. Dar un ejemplo de 
+cómo validar el Codigo Postal Argentino Letra + 4 digitos + 3 letras., 
+ejemplo S2000ADF
+
+Expresión regular: Una expresión regular es un patrón para hacer coincidir una
+combinación de caracteres en cadenas. La expresion regular delimita su inicio 
+con /^ y su fin con $/. 
+Para crear la validación del código posta sería: 
+var expresion_regular = /^[A-Za-z]{1}([0-9]{4})[A-Za-z]{3}$/;
+En el caso de que sean sólo mayúsculas: 
+var expresion_regular = /^[A-Z]{1}([0-9]{4})[A-Z]{3}$/;
+En el ejemplo del código toma tanto las mayúsculas como las minúsculas. 

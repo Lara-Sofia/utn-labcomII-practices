@@ -7,8 +7,12 @@
     <link rel="shortcut icon" href="img/climaIcon.png">
     <title>TUP LC2 - TP Integrador</title>
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/pages/help.css"">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/help.css">
+    <!-- JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/help.js" defer></script>
 </head>
 
 <body>
@@ -33,10 +37,8 @@
 
         <p> Para poder consultar el clima, primero deberá <a href="/add-city.html">Agregar un cuidad</a>
             y lugeo seleccionar la Cuidad en cuestión desde la página <a href="/index.html">Clima</a></p>
-        <section id="form-city-list">
-            <!-- Sección donde se debe colocar el formulario, con el select y el
-botón de consultar -->
-            <form action="">
+        <section>
+            <form action="javascrip:void(0);" id="contact-form">
                 <div class="entrada">
                     <label for="nombre">Nombre:</label>
                     <input type="text" name="nombre" id="nombre">
@@ -44,27 +46,25 @@ botón de consultar -->
 
                 <div class="entrada">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
+                    <input type="text" name="email" id="email">
                 </div>
 
                 <div class="entrada">
-                    <label for="textarea">Mensajeria:</label>
-                    <input type="text" name="textarea" id="textarea" size="30" maxlength="100"
+                    <label for="messaje">Mensajeria:</label>
+                    <input type="text" name="messaje" id="messaje" size="30" maxlength="100"
                         style="height:14rem; width:18rem;">
                 </div>
 
                 <div class="entrada" id="salida">
-                    <input type="button" value="Limpiar">
-                    <input type="button" value="Enviar">
+                    <button type="reset">Limpiar</button>
+                    <button type="submit">Enviar</button>
                 </div>
             </form>
         </section>
-        <div class="button">
-            <button id="validar">Ingrese un mail valido</button>
-        </div>
-        <section id="section-weather-result">
-            <!-- Sección donde se debe mostrar el clima de la ciudad -->
+        <!-- Sección donde se muestra el mensaje de status sobre el envio del email-->
+        <section id="statusEmail">
         </section>
+        
     </main>
     <footer>
         <p>

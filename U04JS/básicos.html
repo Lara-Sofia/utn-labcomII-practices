@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen</title>
+</head>
+<body>
+    <p id="parrafo-1"></p>
+    <p id="parrafo-2"></p>
+    <p id="resultado"></p>
+    <img src="dialogo.jpg" alt="Cuadros de dialogo">
+
+    <script>
+        // imprime en consola
+    console.log('Hola!👋');
+
+    // Cuadros de alert
+    alert('Hola!👋');
+
+    // Escribir la ventana del Navegador
+    let saludo = ('Hola!👋');
+    document.write(saludo);
+
+    // escribimos desde dentro de un elemento
+    document.getElementById('parrafo-1').innerHTML = ('hola!');
+
+    // escribimos texto desde una variable
+    let hello = 'Es para que veas que puedo estar en una variable';
+    document.getElementById('parrafo-2').innerHTML = hello;
+
+    /* Esccribirmos resultado almacenado en una variable debtro del elemento
+    */
+    var x = 10;
+    var y = 20;
+    var suma = x + y;
+    document.getElementById('resultado').innerHTML = suma;
+
+    console.log('tipos de datos');
+    var a = 'Esto es un String'; // comillas simples o dobles
+    console.log(a);
+
+    var b = -25; // entero (negativo)
+    var c = 80.5; // float
+    var d = 4.25e+6; // notación exponencial
+    /*
+    El tipo de dato Number, también incluye valores especiales
+    como: Infinite, -Infinite y NaN.
+    */
+    
+    console.log('bool');
+    var read = true; // leer
+    var notRead = false; // no lee
+    console.log(read);
+    console.log(notRead);
+
+    // Undefined 
+    var a;
+
+    // NUll
+    var a = null;
+
+    // Object 
+    /*Dentro de un objeto
+    a las variables se les llama atributos.
+    a las funciones, métodos*/
+    var person = {
+        name: 'Clara',
+        surname: 'Maria',
+        age: 35
+    };
+    console.log(person.name);
+
+    // Array
+    var colors = ['rojo', 'Amarillo', 'azul'];
+    console.log(colors[0]);
+
+    colors.forEach(function(elemento, index) {
+        console.log('<li id="${index}">${elemento}</li>');
+    });
+
+    // Function
+    var hola = function() {
+        return 'Hola soy una función';
+    }
+    console.log(hola()); 
+    var hola = function(name) {
+        return 'Hola soy una función y me llamo' + name;
+    }
+    console.log(hola('Romina')); 
+
+    // manejo de errores
+    try {
+        // intenta esto
+    } catch (error) {
+        //salta el error
+    } finally {
+        //siemrpe pasa esto
+    }
+
+    //REST funciona como *rest en python
+    function sumar(a, b, ...c) {
+        let resultado = a + b;
+
+        c.forEach(function(n){
+            resultado += n
+        });
+        return resultado;
+    }
+    console.log(sumar(1, 2, 3, 4));
+
+    // una dos arrays.  Operador Spread
+    const arr1 = [1, 2, 3, 4, 5],
+        arr2 = [6,7,8,9,0];
+
+        console.log(arr1, arr2);
+
+    const arr3 = [...arr1, ...arr2];
+    console.log(arr3);
+
+    // Arrow Function
+    /*Function saludar() => función declarada
+    const saludar = function () => expresada*/
+
+    const saludar = () => console.log('Hola!👋')
+    saludar();
+
+    const saludos = nombre => console.log("Hola!👋" + nombre)
+    saludar('Irma');
+    /*
+    const sumar = function (a,b) {
+        return a + b;
+    }
+    console.log(sumar(4,5));
+    */
+    const sumar = (a,b) => a+b;
+    console.log(sumar(4,5));
+
+    const funcionDeVariasLines = () => {
+        console.log('id 1Hola!👋');
+        console.log('id 2Hola!👋');
+        console.log('id 3Hola!👋');
+    }
+
+    const numeros = [1,2,3, 4,5];
+    numeros.forEach((el, index) => {
+        console.log(el + 'esta en la posición' + index);
+    });
+
+    // this
+    /*
+    function Perro() {
+        console.log(this); this sería el objeto
+    }
+    Perro();*/
+
+    const perro = {
+        nombre: 'pablo',
+        ladrar:() => {
+            console.log(this); // hereda el constexto donde se encuentra
+        }
+    }
+
+    // Alert confirm y promt
+    alert('Esto es una alerte');
+    confirm('Confirmación');
+    prompt('Inpiut dentro'); //devuelve null (cancelar) true (aceptar)
+
+    </script>
+
+    
+</body>
+</html>
